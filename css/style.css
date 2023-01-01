@@ -1,0 +1,263 @@
+/* ######## general styles ######## */
+:root {
+    --blue-hover: #666ca3;
+    --blue: #13183f;
+    --text-gray: #83869a;
+    --main-orange: #f74780;
+    --main-pink: #ffa7c3;
+    --white: #ffffff;
+    --primary-gradient: linear-gradient(180deg, rgba(255,111,72,1) 0.04%, rgba(240,42,166,1) 100%);
+    --secondary-gradient: linear-gradient(180deg, #4851ff 0%, #f02aa6 99.92%);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(240,241,255,1) 100%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ######## header and footer section styles ######## */
+.header,
+.footer {
+    /* dimension */
+    padding: 1.875rem 1.25rem;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    /* layout flex */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.header__btn {
+    text-decoration: none;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 1.75rem;
+    width: 8.75rem;
+    height: 3rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    padding: 0.625rem 1.25rem;
+}
+
+.header__btn:hover {
+    background-color: var(--blue-hover);
+    cursor: pointer;
+}
+
+.bg-footer {
+    background-color: var(--blue);
+}
+
+.footer__btn {
+    text-decoration: none;
+    background: var(--secondary-gradient);
+    color: #ffffff;
+    border-radius: 3.125rem;
+    width: 8rem;
+    height: 3rem;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    padding: 0.625rem 1.25rem;
+}
+
+.footer__btn:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+    cursor: pointer;
+}
+
+/* ######## courses section styles ######## */
+.intro {
+    /* dimension */
+    padding: 5rem 1.25rem 0 1.25rem;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    /* layout flex */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro__header {
+    text-align: center;
+}
+
+.intro__header__title {
+    max-width: 280px;
+    color: var(--blue);
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    margin: 0 auto;
+}
+
+.intro__header__p {
+    max-width: 330px;
+    color: var(--text-gray);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 500;
+}
+
+.intro__header__btn {
+    background: var(--primary-gradient);
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    padding: 10px 35px;
+    line-height: 28px;
+    margin-top: 20px;
+}
+
+.intro__header__btn:hover {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      var(--primary-gradient);
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .intro {
+        flex-flow: row nowrap;
+    }
+
+    .intro__header {
+        text-align: left;
+    }
+
+    .intro__header__title {
+        margin: 0;
+    }
+}
+
+/* ######## courses section styles ######## */
+.courses {
+    /* dimension */
+    padding: 0 1.25rem 5rem 1.25rem;
+    max-width: 68.75rem;
+    margin: 0 auto;
+    /* layout grid */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content max-content max-content max-content max-content;
+    row-gap: 40px;
+}
+
+.courses__checkOutCourses {
+    background: var(--primary-gradient);
+    border-radius: 10px;
+    padding: 0 30px;
+}
+
+.courses__checkOutCourses__p {
+    max-width: 14.375rem;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 800;
+    line-height: 32px;
+}
+
+.courses__animation__icon,
+.courses__design__icon,
+.courses__photography__icon,
+.courses__crypto__icon,
+.courses__business__icon {
+    position: absolute;
+    top: -20px;
+}
+
+.courses__animation,
+.courses__design,
+.courses__photography,
+.courses__crypto,
+.courses__business {
+    border-radius: 10px;
+    padding: 40px 25px 30px 25px;
+    background-color: var(--white);
+    /* position */
+    position: relative;
+}
+
+.courses__animation__title,
+.courses__design__title,
+.courses__photography__title,
+.courses__crypto__title,
+.courses__business__title {
+    color: var(--blue);
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.courses__animation__p,
+.courses__design__p,
+.courses__photography__p,
+.courses__crypto__p,
+.courses__business__p {
+    max-width: 300px;
+    color: var(--text-gray);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+}
+
+.courses__animation__link,
+.courses__design__link,
+.courses__photography__link,
+.courses__crypto__link,
+.courses__business__link {
+    text-decoration: none;
+    color: var(--main-orange);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.courses__animation__link:hover,
+.courses__design__link:hover,
+.courses__photography__link:hover,
+.courses__crypto__link:hover,
+.courses__business__link:hover {
+    color: var(--main-pink);
+}
+
+
+@media (min-width: 768px) {
+    .courses {
+        padding: 5rem 1.25rem 5rem 1.25rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: max-content max-content max-content;
+        gap: 40px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .courses {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: max-content max-content;
+    }
+
+    .courses__animation__p,
+    .courses__design__p,
+    .courses__photography__p,
+    .courses__crypto__p,
+    .courses__business__p {
+        max-width: 250px;
+    }
+}
